@@ -1,0 +1,25 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'java'
+}
+
+repositories {
+        mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'commons-cli:commons-cli:1.6.0'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.loserexe.Main'
+    }
+}
+
+task run(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.loserexe.Main'
+    args = ['-f', 'RustCraft-1.0.zip']
+}
