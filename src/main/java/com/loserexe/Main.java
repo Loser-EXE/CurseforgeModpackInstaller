@@ -40,7 +40,7 @@ public class Main {
     private static final HelpFormatter helpFormater = new HelpFormatter();
 
     private static final String name = "Curseforge Modpack Installer";
-    private static final String version = "0.1.0";
+    private static final String version = "1.0.0";
 
     private static String modpackFileName;
     private static String apiKey;
